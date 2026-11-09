@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(circle, #6B263F, #250D19 75%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.title {
+    font-family: 'Satisfy', cursive;
+    font-size: 32px;
+    color: #FFD1E0;
+    margin-bottom: 50px;
+}
+
+.heart {
+    position: relative;
+    width: 220px;
+    height: 200px;
+    cursor: pointer;
+    animation: heartbeat 1.5s infinite;
+    filter: drop-shadow(0 0 20px #FF4F91);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.heart svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.heart path {
+    fill: url(#heartGradient);
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    text-shadow: 0 2px 8px #8b001e;
+    pointer-events: none;
+    padding-bottom: 5px;
+}
+
+.subtitle {
+    margin-top: 35px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #FFD1E0;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.subtitle-1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.subtitle-2 {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.info {
+    margin-top: 100px;
+    margin-inline: 25px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #f4b7c6;
+    opacity: 0.8;
+    text-align: center;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.08); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.05); }
+    60% { transform: scale(1); }
+}
+
+.particle {
+    position: fixed;
+    pointer-events: none;
+    font-size: 20px;
+    animation: fly 1.5s ease-out forwards;
+}
+
+@keyframes fly {
+    to {
+        transform: translate(var(--x), var(--y))
+                   rotate(360deg) scale(0);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .heart {
+        width: 190px;
+        height: 175px;
+    }
+
+    .message {
+        font-size: 21px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .heart {
+        animation: none;
+    }
+}
