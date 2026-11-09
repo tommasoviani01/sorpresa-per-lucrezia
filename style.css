@@ -29,7 +29,7 @@ body {
     font-family: 'Satisfy', cursive;
     font-size: 32px;
     color: #FFD1E0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .heart {
@@ -89,7 +89,7 @@ body {
 }
 
 .info {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-inline: 25px;
     font-size: 12px;
     letter-spacing: 0.5px;
