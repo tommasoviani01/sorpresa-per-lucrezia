@@ -7,20 +7,33 @@
 html {
     width: 100%;
     min-height: 100%;
-    background: #250D19;
+}
+
+html, body {
+    background-color: #250D19 !important;
 }
 
 body {
+    margin: 0;
     width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
+    position: relative;
+    isolation: isolate;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
-    background: radial-gradient(circle, #6B263F, #250D19 75%);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: white;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -1px;
+    z-index: -1;
+    background: radial-gradient(circle, #6B263F, #250D19 75%);
 }
 
 .container {
