@@ -17,8 +17,6 @@ body {
     background: radial-gradient(circle, #6B263F, #250D19 75%);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: white;
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .container {
